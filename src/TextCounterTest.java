@@ -1,7 +1,7 @@
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
 
 public class TextCounterTest {
 
@@ -15,7 +15,7 @@ public class TextCounterTest {
         //Assert
         int expected = 0;
 
-        assertEquals(expected, actual);
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
@@ -30,7 +30,7 @@ public class TextCounterTest {
 
         int expected = 1;
 
-        assertEquals(expected, actual);
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
@@ -46,7 +46,7 @@ public class TextCounterTest {
 
         int expected = 0;
 
-        assertEquals(expected, actual);
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
@@ -62,7 +62,7 @@ public class TextCounterTest {
 
         int expected = 15;
 
-        assertEquals(expected, actual);
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
@@ -79,7 +79,7 @@ public class TextCounterTest {
 
         boolean expected = true;
 
-        assertEquals(expected, actual);
+        Assertions.assertEquals(expected, actual);
     }
 
 
