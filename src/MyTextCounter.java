@@ -7,7 +7,8 @@ public class MyTextCounter {
         Scanner scan = new Scanner(System.in);
         TextCounter count = new TextCounter();
 
-        System.out.println("Enter a text and I shall calculate the number of Letters and rows you have typed. You stop with the word stop.");
+        System.out.println("Enter a text and I shall calculate the number of Letters and rows you have typed.");
+        System.out.println("You stop with the word stop.");
 
         String Text;
 
@@ -18,7 +19,8 @@ public class MyTextCounter {
             count.AreThereStop(Text);
 
             if (count.getStop()) {
-
+                count.SaveIgnoredRow();
+                count.SaveIgnoredLetters();
                 break;
             }
         }
@@ -26,16 +28,10 @@ public class MyTextCounter {
 //   antal tecken och hur många rader som användaren har skrivit,
 //   exklusive raden med ordet stop
 
-        System.out.println("You have written on " + count.getRowAmount() + " Lines ");
-        System.out.println("You have entered " + count.getLetterAmount() + " letters ");
+        System.out.println("You have written on " + (count.getRowAmount() - count.getIgnoredRow()) + " Lines ");
+        System.out.println("You have entered " + (count.getLetterAmount() - count.getIgnoredLetters()) + " letters ");
         System.out.println("Stopped = " + count.getStop());
 
     }
 }
-
-
-
-
-
-
 

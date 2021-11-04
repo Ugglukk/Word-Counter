@@ -20,7 +20,7 @@ public class TextCounterTest {
 
     @Test
 //spara antalet rader
-        public void testSaveRows() {
+    public void testSaveRows() {
         //Arrange
         TextCounter count = new TextCounter();
         //Act
@@ -28,10 +28,11 @@ public class TextCounterTest {
         int actual = count.getRowAmount();
         //Assert
 
-        int expected = 0;
+        int expected = 1;
 
         assertEquals(expected, actual);
     }
+
     @Test
 //ta reda på hur många tecken jag har skrivit
     public void testLetterAmount() {
@@ -54,7 +55,7 @@ public class TextCounterTest {
         //Arrange
         TextCounter count = new TextCounter();
         //Act
-        count.SaveLetters( "martin äter mat");
+        count.SaveLetters("martin äter mat");
         int actual = count.getLetterAmount();
 
         //Assert
@@ -80,5 +81,6 @@ public class TextCounterTest {
 
         assertEquals(expected, actual);
     }
+
 
 }
